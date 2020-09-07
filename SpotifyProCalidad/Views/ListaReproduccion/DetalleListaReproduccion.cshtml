@@ -1,0 +1,74 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/Principal.cshtml";
+}
+
+<h1>Lista Reproduccion : Mis Favoritos </h1>
+<h2>Canciones:</h2>
+    
+    <head>
+  
+
+        
+        <style>
+        #Playerlist{
+                list-style: none;
+                }
+                #Playerlist li a{
+                color: #1b1e21;
+                text-decoration: none;
+                }
+                #Playerlist .current-song a{
+                color: blue;
+                }
+        </style>
+   
+    </head>
+ 
+
+
+<body>
+<audio src="" controls id="audioPlayer">
+    
+</audio>
+<ul id="playlist">
+        @foreach (var item in @ViewBag.DetalleDeCanciones)
+        {
+         <li class="current-song">
+    
+                
+           <a href=@item.Musica>@item.Nombre</a>
+    
+          </li>
+        }
+</ul>
+
+</body>
+<script>
+    audioPlayer();
+        function audioPlayer(){
+            var currentSong = 0;
+            $("#audioPlayer")[0].src = $("#playlist li a")[0];
+            $("#audioPlayer")[0].play();
+            $("#playlist li a").click(function(e){
+               e.preventDefault(); 
+               $("#audioPlayer")[0].src = this;
+               $("#audioPlayer")[0].play();
+               $("#playlist li").removeClass("current-song");
+                currentSong = $(this).parent().index();
+                $(this).parent().addClass("current-song");
+            });
+            
+            $("#audioPlayer")[0].addEventListener("ended", function(){
+               currentSong++;
+                if(currentSong == $("#playlist li a").length)
+                    currentSong = 0;
+                $("#playlist li").removeClass("current-song");
+                $("#playlist li:eq("+currentSong+")").addClass("current-song");
+                $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
+                $("#audioPlayer")[0].play();
+            });
+        }
+
+</script>
