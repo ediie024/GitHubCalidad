@@ -1,76 +1,155 @@
-﻿
-
-@{
-    Layout = "~/Views/Shared/Principal.cshtml";
+﻿@{ Layout = null;
+	
 }
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>@ViewData["Title"] - SpotifyProCalidad</title>
+		<meta name="description" content="Your description">
+		<meta name="keywords" content="Your,Keywords">
+		<meta name="author" content="HimanshuGupta">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<h1>Lista Reproduccion : Mis Favoritos </h1>
-<h2>Canciones:</h2>
-    
-    <head>
-  
+	<link href="~/Plantilla/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Plantilla/css/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/Plantilla/css/owl.carousel.css">
+	<link href="~/Plantilla/css/font-awesome.min.css" rel="stylesheet">		
+	<link href="~/Plantilla/css/style.css" rel="stylesheet">
+	<link href="~/Plantilla/css/style-color.css" rel="stylesheet">
 
-        
-        <style>
-        #Playerlist{
-                list-style: none;
-                }
-                #Playerlist li a{
-                color: #1b1e21;
-                text-decoration: none;
-                }
-                #Playerlist .current-song a{
-                color: blue;
-                }
-        </style>
-   
-    </head>
- 
-
-
+</head>
 <body>
-<audio src="" controls id="audioPlayer">
-    
-</audio>
-<ul id="playlist">
-    <ol style="display: block;">
-    @foreach (var item in @ViewBag.DetalleDeCanciones)
-    {
-        <li class="current-song">
 
+		<div class="modal fade" id="bookTicket" tabindex="-1" role="dialog" aria-labelledby="BookTicket">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Name of The Event &nbsp; <small><span class="label label-success">Available</span> &nbsp; <span class="label label-danger">Not Available</span></small></h4>
+					</div>
+					<form>
+						<div class="modal-body">
+							<div class="form-group">
+								<label for="exampleInputEmail1">Email</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@mail.com">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputContact">Contact</label>
+								<input type="text" class="form-control" id="exampleInputContact" placeholder="+91 55 5555 5555">
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<!-- link to payment gatway here -->
+							<button type="button" class="btn btn-primary">Book Now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper" id="home">
+			<div class="nav-animate"></div>
+			<div id="latestalbum" class="hero pad">
+				<div class="container">
+					<div class="hero-content ">
+						<!-- heading -->
+						<h2>Lista de reproduccion</h2>
+						<hr>
+						<!-- paragraph -->
+						<p>La mejor opcion para escuciar tu  <strong class="theme-color">musica favorita</strong> </p>
+					</div>
+					<div class="hero-playlist">
+						<div class="row">
+							<div class="col-md-6 col-sm-6">
+								<div class="hero-content">
+									<audio src="" controls id="audioPlayer" >
+                                                                        
+									</audio>
+								</div>
+								<hr>
+								<div class="figure">
+									<img class="img-responsive" src="~/Plantilla/img/album/1.jpg" alt=""/>
+									<img class="img-responsive disk" src="~/Plantilla/img/album/disk.png" alt=""/>
+								</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<div class="playlist-content">
+									<ul class="list-unstyled" id="playlist">
+										@foreach (var item in @ViewBag.DetalleDeCanciones)
+										{
+											<li class="playlist-number">
+												<!-- song information -->
+												<div class="song-info">
+													<!-- song title -->
+													<a href=@item.Musica>@item.Nombre</a></div>
+												<!-- music icon -->
 
-            <a href=@item.Musica>@item.Nombre</a>
+												<div class="clearfix"></div>
+											</li>
+										}
+										
+									</ul>
+								</div>
+							</div>
+							
+						
+							</div>
+						</div>
+				</div>
+			</div>
+			<footer>
+				<div class="container">
+				</div>
+			</footer>
+			<span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span> 
 
-        </li>
-    }
-    </ol>
-</ul>
+		</div>
 
+		<script src="~/Plantilla/js/jquery.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="~/Plantilla/js/bootstrap.min.js"></script>
+		<!-- WayPoints JS -->
+		<script src="~/Plantilla/js/waypoints.min.js"></script>
+		<!-- Include js plugin -->
+		<script src="~/Plantilla/js/owl.carousel.min.js"></script>
+		<!-- One Page Nav -->
+		<script src="~/Plantilla/js/jquery.nav.js"></script>
+		<!-- Respond JS for IE8 -->
+		<script src="~/Plantilla/js/respond.min.js"></script>
+		<!-- HTML5 Support for IE -->
+		<script src="~/Plantilla/js/html5shiv.js"></script>
+		<!-- Custom JS -->
+		<script src="~/Plantilla/js/custom.js"></script>
+  
 </body>
-<script>
-    audioPlayer();
-        function audioPlayer(){
-            var currentSong = 0;
-            $("#audioPlayer")[0]. src= $("#playlist ol li a")[0];
-            $("#audioPlayer")[0].play();
-            $("#playlist li a").click(function(e){
-               e.preventDefault(); 
-               $("#audioPlayer")[0].src = this;
-               $("#audioPlayer")[0].play();
-               $("#playlist li").removeClass("current-song");
-                currentSong = $(this).parent().index();
-                $(this).parent().addClass("current-song");
-            });
-            
-            $("#audioPlayer")[0].addEventListener("ended", function(){
-               currentSong++;
-                if(currentSong == $("#playlist ol li a").length)
-                    currentSong = 0;
-                $("#playlist li").removeClass("current-song");
-                $("#playlist li:eq("+currentSong+")").addClass("current-song");
-                $("#audioPlayer")[0].src = $("#playlist ol li a")[currentSong].href;
-                $("#audioPlayer")[0].play();
-            });
-        }
 
-</script>
+							<script>
+							audioPlayer();
+							function audioPlayer(){
+							var currentSong = 0;
+					    	$("#audioPlayer")[0]. src= $("#playlist li div a")[0];
+					    	$("#audioPlayer")[0].play();
+					    	
+					    	$("#playlist li a").click(function(e){
+					    	   e.preventDefault(); 
+					    	   $("#audioPlayer")[0].src = this;
+					    	   $("#audioPlayer")[0].play();
+					    	   
+					    	   currentSong = $(this).parent().index();
+					    	   
+					    	});
+					    	
+					    		$("#audioPlayer")[0].addEventListener("ended", function(){
+					    	   	currentSong++;
+					    	    if(currentSong == $("#playlist li div a").length)
+					    	    currentSong = 0;
+					    	    
+					    	    
+					    	    $("#audioPlayer")[0].src = $("#playlist li div a")[currentSong].href;
+					    	    $("#audioPlayer")[0].play();
+					    	});
+						}
+                        </script>	
+</html>""~/PlantillaLayuout

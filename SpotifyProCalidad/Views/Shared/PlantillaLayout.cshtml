@@ -1,280 +1,254 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
-    <title>@ViewData["Title"]</title>
-     <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-      <title>Insertion HTML5 Template</title>
-    <!--
-    
-    Template 2101 Insertion
-    
-    http://www.tooplate.com/view/2101-insertion
-    
-    -->
-      <!-- load CSS -->
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">        <!-- Google web font "Open Sans" -->
-      <link rel="stylesheet" href=@Url.Content("css/bootstrap.min.css")>                                            <!-- https://getbootstrap.com/ -->
-      <link rel="stylesheet" href=@Url.Content("css/fontawesome-all.min.css")>                                      <!-- Font awesome -->
-      <link rel="stylesheet" href=@Url.Content("css/tooplate-style.css")>                                           <!-- Templatemo style -->
-    
-      <script>
-        var renderPage = true;
-    
-        if (navigator.userAgent.indexOf('MSIE') !== -1
-          || navigator.appVersion.indexOf('Trident/') > 0) {
-          /* Microsoft Internet Explorer detected in. */
-          alert("Please view this in a modern browser such as Chrome or Microsoft Edge.");
-          renderPage = false;
-        }
-      </script>
-
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - SpotifyProCalidad</title>
+<meta name="description" content="Your description">
+		<meta name="keywords" content="Your,Keywords">
+		<meta name="author" content="HimanshuGupta">
+		
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<!-- Styles -->
+		<!-- Bootstrap CSS -->
+		<link href="~/Plantilla/css/bootstrap.min.css" rel="stylesheet">	
+		<!-- Animate CSS -->
+		<link href="~/Plantilla/css/animate.min.css" rel="stylesheet">
+		<!-- Basic stylesheet -->
+		<link rel="stylesheet" href="~/Plantilla/css/owl.carousel.css">
+		<!-- Font awesome CSS -->
+		<link href="~/Plantilla/css/font-awesome.min.css" rel="stylesheet">		
+		<!-- Custom CSS -->
+		<link href="~/Plantilla/css/style.css" rel="stylesheet">
+		<link href="~/Plantilla/css/style-color.css" rel="stylesheet">
+		
+		<!-- Favicon -->
+	
 </head>
 <body>
 
-  <!-- Loader -->
-  <div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
-  </div>
+		<div class="modal fade" id="bookTicket" tabindex="-1" role="dialog" aria-labelledby="BookTicket">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">Name of The Event &nbsp; <small><span class="label label-success">Available</span> &nbsp; <span class="label label-danger">Not Available</span></small></h4>
+					</div>
+					<!-- form for events ticket booking -->
+					<form>
+						<div class="modal-body">
+							<div class="form-group">
+								<label for="exampleInputEmail1">Email</label>
+								<input type="email" class="form-control" id="exampleInputEmail1" placeholder="example@mail.com">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputContact">Contact</label>
+								<input type="text" class="form-control" id="exampleInputContact" placeholder="+91 55 5555 5555">
+							</div>
+						
+						
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+							<!-- link to payment gatway here -->
+							<button type="button" class="btn btn-primary">Book Now</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<!-- wrapper -->
+		<div class="wrapper" id="home">
+		
+			<!-- header area -->
+			<header>
+				<!-- secondary menu -->
+				<nav class="secondary-menu">
+					<div class="container">
+						<!-- secondary menu left link area -->
+						<div class="sm-left">
+							<strong>Proyecto Calidad</strong>:&nbsp; <a href="#">SpotifyPro</a>&nbsp;&nbsp;&nbsp;&nbsp;
+							
+						</div>
+						<!-- secondary menu right link area -->
+						<div class="sm-right">
+							<!-- social link -->
+						
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</nav>
+				<!-- primary menu -->
+				<nav class="navbar navbar-fixed-top navbar-default">
+					<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<!-- logo area -->
+						
+						</div>
 
-  <div class="tm-main">
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="#latestalbum">Lista de Reproduccion</a></li>
+			
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+			</header>
+			<!--/ header end -->
+			
+			<!-- banner area -->
 
-    <div class="tm-welcome-section">
-      <div class="container tm-navbar-container">
-        <div class="row">
-          <div class="col-xl-12">
-            <nav class="navbar navbar-expand-sm">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a href="PlantillaLayout.cshtml" class="nav-link tm-nav-link tm-text-white active">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a href=@Url.Content("about.html") class="nav-link tm-nav-link tm-text-white">About</a>
-                </li>
-                <li class="nav-item">
-                  <a href=@Url.Content("contact.html") class="nav-link tm-nav-link tm-text-white">Contact</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-      </div>
+			<!--/ banner end -->
+			
+			<!-- block for animate navigation menu -->
+			<div class="nav-animate"></div>
+			
+			<!-- Hero block area -->
+			<div id="latestalbum" class="hero pad">
+				<div class="container">
+					<!-- hero content -->
+					<div class="hero-content ">
+						<!-- heading -->
+						<h2>Lista de reproduccion</h2>
+						<hr>
+						<!-- paragraph -->
+						<p>La mejor opcion para escuciar tu  <strong class="theme-color">musica favorita</strong> </p>
+					</div>
+					<!-- hero play list -->
+					<div class="hero-playlist">
+						<div class="row">
+							<div class="col-md-6 col-sm-6">
+								<!-- music album image -->
+								<div class="hero-content">
+									<audio src="" controls id="audioPlayer" >
+                                                                        
+									</audio>
+								</div>
+								<hr>
+								<div class="figure">
+									
+									<!-- image -->
+									<img class="img-responsive" src="~/Plantilla/img/album/1.jpg" alt=""/>
+									<!-- disk image -->
+									<img class="img-responsive disk" src="~/Plantilla/img/album/disk.png" alt=""/>
 
-      <div class="container text-center tm-welcome-container">
-        <div class="tm-welcome">
-          <i class="fas tm-fa-big fa-music tm-fa-mb-big"></i>
-          <h1 class="text-uppercase mb-3 tm-site-name">Insertion</h1>
-          <p class="tm-site-description">New HTML Website Template</p>
-        </div>
-      </div>
 
-    </div>
+								</div>
+								
+								<!-- album details -->
+							
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<!-- play list -->
+								
+								<div class="playlist-content">
+									<ul class="list-unstyled" id="playlist">
+										@foreach (var item in @ViewBag.DetalleDeCanciones)
+										{
+											<li class="playlist-number">
+												<!-- song information -->
+												<div class="song-info">
+													<!-- song title -->
+													<a href=@item.Musica>@item.Nombre</a></div>
+												<!-- music icon -->
 
-    <div class="container">
-      <div class="tm-search-form-container">
-        <form action="PlantillaLayout.cshtml" method="GET" class="form-inline tm-search-form">
-          <div class="text-uppercase tm-new-release">New Release</div>
-          <div class="form-group tm-search-box">
-            <input type="text" name="keyword" class="form-control tm-search-input" placeholder="Type your keyword ...">
-            <input type="submit" value="Search" class="form-control tm-search-submit">
-          </div>
-          <div class="form-group tm-advanced-box">
-            <a href="#" class="tm-text-white">Go Advanced ...</a>
-          </div>
-        </form>
-      </div>
+												<div class="clearfix"></div>
+											</li>
+										}
+										
+									</ul>
+								</div>
+							</div>
+							
+						
+							</div>
+						</div>
+				</div>
+			</div>
+			<!--/ hero end -->
+			
+			<!-- promo -->
+		
+			<!--/ promo end -->
+			
+			<!-- featured abbum -->
+			
+			<!--/ cta end -->
+			
+			<!-- work with us -->
+			
+			
+		
+        @RenderBody()
+			<footer>
+				<div class="container">
+					<!-- social media links -->
+					
+					<!-- copy right -->
+		
+				</div>
+			</footer>
+			<!-- footer end -->
+			
+			<!-- Scroll to top -->
+			<span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span> 
 
-      <div class="row tm-albums-container grid">
-        <div class="col-sm-6 col-12 col-md-6 col-lg-3 col-xl-3 tm-album-col">
-          <figure class="effect-sadie">
-            <img src=@Url.Content("img/insertion-260x390-01.jpg") alt="Image" class="img-fluid">
-            <figcaption>
-              <h2>First Album</h2>
-              <p>Rollover text and description text goes here over mouse over...</p>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="col-sm-6 col-12 col-md-6 col-lg-3 col-xl-3 tm-album-col">
-          <figure class="effect-sadie">
-            <img src=@Url.Content("img/insertion-260x390-02.jpg") alt="Image" class="img-fluid">
-            <figcaption>
-              <h2>Album Two</h2>
-              <p>Maecenas iaculis et turpis et iaculis. Aenean at volutpat diam.</p>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="col-sm-6 col-12 col-md-6 col-lg-3 col-xl-3 tm-album-col">
-          <figure class="effect-sadie">
-            <img src=@Url.Content("img/insertion-260x390-03.jpg") alt="Image" class="img-fluid">
-            <figcaption>
-              <h2>Third Album</h2>
-              <p>Vivamus eget elit purus. Nullam consectetur porttitor elementum.</p>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="col-sm-6 col-12 col-md-6 col-lg-3 col-xl-3 tm-album-col">
-          <figure class="effect-sadie">
-            <img src=@Url.Content("img/insertion-260x390-04.jpg") alt="Image" class="img-fluid">
-            <figcaption>
-              <h2>Album Four</h2>
-              <p>Praesent nec feugiat dolor, elementum mollis purus. Etiam faucibus.</p>
-            </figcaption>
-          </figure>
-        </div>
-      </div>
+		</div>
 
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="tm-tag-line">
-          <h2 class="tm-tag-line-title">Music is your powerful energy.</h2>
-          </div>
-        </div>
-      </div>
-
-      <div class="row mb-5">
-        <div class="col-xl-12">
-          <div class="media-boxes">
-            <div class="media">
-              <img src=@Url.Content("img/insertion-140x140-01.jpg") alt="Image" class="mr-3">
-              <div class="media-body tm-bg-gray">
-                <div class="tm-description-box">
-                  <h5 class="tm-text-blue">Vivamus eget urna vitae ante</h5>
-                  <p class="mb-0">Insertion HTML Template includes 3 different pages. You can use this layout for your website. Please tell your friends about <a href="https://plus.google.com/+tooplate" target="_parent">Tooplate</a>. Thank you.</p>
-                </div>
-                <div class="tm-buy-box">
-                  <a href="#" class="tm-bg-blue tm-text-white tm-buy">buy</a>
-                  <span class="tm-text-blue tm-price-tag">$5.50</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="media">
-              <img src=@Url.Content("img/insertion-140x140-02.jpg") alt="Image" class="mr-3">
-              <div class="media-body tm-bg-pink-light">
-                <div class="tm-description-box">
-                  <h5 class="tm-text-pink">Proin fermentum sapien sed nisl</h5>
-                  <p class="mb-0">Donec est felis, posuere viverra dapibus ac, pretium vel libero. Aliquam consectetur, arcu eget euismod congue, tortor metus vehicula.</p>
-                </div>
-                <div class="tm-buy-box">
-                  <a href="#" class="tm-bg-pink tm-text-white tm-buy">buy</a>
-                  <span class="tm-text-pink tm-price-tag">$7.25</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="media">
-              <img src=@Url.Content("img/insertion-140x140-03.jpg") alt="Image" class="mr-3">
-              <div class="media-body tm-bg-gray">
-                <div class="tm-description-box">
-                  <h5 class="tm-text-blue">Quisque dignissim porta nunc</h5>
-                  <p class="mb-0">In neque felis, fringilla vel orci ut, sodales consectetur purus. Vivamus eget urna vitae ante pellentesque iaculis. Praesent sit amet.</p>
-                </div>
-                <div class="tm-buy-box">
-                  <a href="#" class="tm-bg-blue tm-text-white tm-buy">buy</a>
-                  <span class="tm-text-blue tm-price-tag">$6.80</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="media">
-              <img src=@Url.Content("img/insertion-140x140-04.jpg") alt="Image" class="mr-3">
-              <div class="media-body tm-bg-pink-light">
-                <div class="tm-description-box">
-                  <h5 class="tm-text-pink">Vestibulum mattis quam sodales</h5>
-                  <p class="mb-0">Curabitur id tempor orci. Fusce efficitur in enim sit amet sodales. Proin id gravida leo. Phasellus non quam et justo faucibus rhoncus.</p>
-                </div>
-                <div class="tm-buy-box">
-                  <a href="#" class="tm-bg-pink tm-text-white tm-buy">buy</a>
-                  <span class="tm-text-pink tm-price-tag">$3.75</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="media">
-              <img src=@Url.Content("img/insertion-140x140-05.jpg") alt="Image" class="mr-3">
-              <div class="media-body tm-bg-gray">
-                <div class="tm-description-box">
-                  <h5 class="tm-text-blue">Vestibulum mattis quam sodales</h5>
-                  <p class="mb-0">Maecenas sit amet nibh faucibus, tincidunt nisl sit amet, elementum eros. Fusce congue ligula gravida lorem lacinia.</p>
-                </div>
-                <div class="tm-buy-box">
-                  <a href="#" class="tm-bg-blue tm-text-white tm-buy">buy</a>
-                  <span class="tm-text-blue tm-price-tag">$5.25</span>
-                </div>
-              </div>
-            </div>
-          </div> <!-- media-boxes -->
-        </div>
-      </div>
-
-      <div class="row tm-mb-big tm-subscribe-row">
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 tm-bg-gray tm-subscribe-form">
-          <h3 class="tm-text-pink tm-mb-30">Subscribe our updates!</h3>
-          <p class="tm-mb-30">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi semper, ligula et pretium porttitor, leo orci accumsan ligula.</p>
-          <form action="PlantillaLayout.cshtml" method="POST">
-            <div class="form-group mb-0">
-              <input type="text" class="form-control tm-subscribe-input" placeholder="Your Email">
-              <input type="submit" value="Submit" class="tm-bg-pink tm-text-white d-block ml-auto tm-subscribe-btn">
-            </div>
-          </form>
-        </div>
-        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 img-fluid pl-0 tm-subscribe-img"></div>
-      </div>
-
-      <div class="row tm-mb-medium">
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-          <h4 class="mb-4 tm-font-300">Latest Albums</h4>
-          <a href="#" class="tm-text-blue-dark d-block mb-2">Sed fringilla consectetur</a>
-          <a href="#" class="tm-text-blue-dark d-block mb-2">Mauris porta nisl quis</a>
-          <a href="#" class="tm-text-blue-dark d-block mb-2">Quisque maximus quam nec</a>
-          <a href="#" class="tm-text-blue-dark d-block">Class aptent taciti sociosqu ad</a>
-        </div>
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 mb-4">
-          <h4 class="mb-4 tm-font-300">Our Pages</h4>
-          <a href="#" class="tm-text-blue-dark d-block mb-2">Nam dapibus imperdiet</a>
-          <a href="#" class="tm-text-blue-dark d-block mb-2">Primis in faucibus orci</a>
-          <a href="#" class="tm-text-blue-dark d-block mb-2">Sed interdum blandit dictum</a>
-          <a href="#" class="tm-text-blue-dark d-block">Donec non blandit nisl</a>
-        </div>
-        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
-          <h4 class="mb-4 tm-font-300">Quick Links</h4>
-          <a href="#" class="tm-text-blue-dark d-block mb-2">Nullam scelerisque mauris</a>
-          <a href="#" class="tm-text-blue-dark d-block mb-2">Vivamus tristique enim non orci</a>
-          <a href="#" class="tm-text-blue-dark d-block mb-2">Luctus et ultrices posuere</a>
-          <a href="#" class="tm-text-blue-dark d-block">Cubilia Curae</a>
-        </div>
-      </div>
-      <footer class="row">
-        <div class="col-xl-12">
-          <p class="text-center p-4">Copyright &copy; <span class="tm-current-year">2018</span> Your Company Name 
-          
-          - Design:  Tooplate</p>
-        </div>
-      </footer>
-    </div> <!-- .container -->
-
-  </div> <!-- .main -->
-
-  <!-- load JS -->
-  <script src=@Url.Content("js/jquery-3.2.1.slim.min.js")></script> <!-- https://jquery.com/ -->
-  <script>
-
-    /* DOM is ready
-    ------------------------------------------------*/
-    $(function () {
-
-      if (renderPage) {
-        $('body').addClass('loaded');
-      }
-
-      $('.tm-current-year').text(new Date().getFullYear());  // Update year in copyright
-    });
-
-  </script>
-@RenderBody()
-
+		<script src="~/Plantilla/js/jquery.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="~/Plantilla/js/bootstrap.min.js"></script>
+		<!-- WayPoints JS -->
+		<script src="~/Plantilla/js/waypoints.min.js"></script>
+		<!-- Include js plugin -->
+		<script src="~/Plantilla/js/owl.carousel.min.js"></script>
+		<!-- One Page Nav -->
+		<script src="~/Plantilla/js/jquery.nav.js"></script>
+		<!-- Respond JS for IE8 -->
+		<script src="~/Plantilla/js/respond.min.js"></script>
+		<!-- HTML5 Support for IE -->
+		<script src="~/Plantilla/js/html5shiv.js"></script>
+		<!-- Custom JS -->
+		<script src="~/Plantilla/js/custom.js"></script>
+        @RenderSection("Scripts", required: false)
 </body>
-</html>
+
+							<script>
+							audioPlayer();
+							function audioPlayer(){
+							var currentSong = 0;
+					    	$("#audioPlayer")[0]. src= $("#playlist li div a")[0];
+					    	$("#audioPlayer")[0].play();
+					    	
+					    	$("#playlist li a").click(function(e){
+					    	   e.preventDefault(); 
+					    	   $("#audioPlayer")[0].src = this;
+					    	   $("#audioPlayer")[0].play();
+					    	   
+					    	   currentSong = $(this).parent().index();
+					    	   
+					    	});
+					    	
+					    	$("#audioPlayer")[0].addEventListener("ended", function(){
+					    	   currentSong++;
+					    	    if(currentSong == $("#playlist li div a").length)
+					    	        currentSong = 0;
+					    	    
+					    	    
+					    	    $("#audioPlayer")[0].src = $("#playlist li div a")[currentSong].href;
+					    	    $("#audioPlayer")[0].play();
+					    	});
+						}
+                        </script>	
+</html>""~/PlantillaLayuout

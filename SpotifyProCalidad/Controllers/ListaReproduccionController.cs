@@ -21,14 +21,14 @@ namespace SpotifyProCalidad.Controllers
         {
             var ListasDeReproducciones = context.ListaReproducciones.ToList();
             
-            return View(ListasDeReproducciones);
-            //return RedirectToAction("DetalleListaReproduccion");
+           // return View(ListasDeReproducciones);
+            return RedirectToAction("DetalleListaReproduccion");
         }
 
         public IActionResult DetalleListaReproduccion(int IdLista)
         {
             var DetalleListaReproduccion = context.DetalleListaReproduccionCanciones
-                .Where(o => o.IdListaReproduccion == IdLista).ToList();
+                .Where(o => o.IdListaReproduccion == 3).ToList();
             var ListaCanciones = DetalleListaReproduccion.Select(o => o.IdCancion).ToList();
             var cancionesTotal = context.Canciones.ToList();
            
@@ -49,9 +49,5 @@ namespace SpotifyProCalidad.Controllers
 
             return View();
         }
-        
-       
-        
-        
     }
 }

@@ -79,5 +79,5 @@ D:\Upn 2020-2\Calidad\gitgub\Calidad\SpotifyProCalidad\SpotifyProCalidad\obj\Deb
 D:\Upn 2020-2\Calidad\gitgub\Calidad\SpotifyProCalidad\SpotifyProCalidad\obj\Debug\netcoreapp3.1\SpotifyProCalidad.genruntimeconfig.cache
 D:\Upn 2020-2\Calidad\gitgub\Calidad\SpotifyProCalidad\SpotifyProCalidad\obj\Debug\netcoreapp3.1\Razor\Views\ListaReproduccion\DetalleListaReproduccion.cshtml.g.cs
 D:\Upn 2020-2\Calidad\gitgub\Calidad\SpotifyProCalidad\SpotifyProCalidad\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Principal.cshtml.g.cs
-D:\Upn 2020-2\Calidad\gitgub\Calidad\SpotifyProCalidad\SpotifyProCalidad\obj\Debug\netcoreapp3.1\Razor\Views\ListaReproduccion\plantilla.cshtml.g.cs
 D:\Upn 2020-2\Calidad\gitgub\Calidad\SpotifyProCalidad\SpotifyProCalidad\obj\Debug\netcoreapp3.1\Razor\Views\Shared\PlantillaLayout.cshtml.g.cs
+D:\Upn 2020-2\Calidad\gitgub\Calidad\SpotifyProCalidad\SpotifyProCalidad\obj\Debug\netcoreapp3.1\Razor\Views\ListaReproduccion\Plantilla.cshtml.g.cs

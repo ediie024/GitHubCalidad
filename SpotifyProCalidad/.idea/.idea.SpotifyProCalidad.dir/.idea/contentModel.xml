@@ -121,6 +121,99 @@
             <e p="LICENSE.txt" t="Include" />
           </e>
         </e>
+        <e p="Plantilla" t="Include">
+          <e p="audio" t="Include">
+            <e p="audio.mp3" t="Include" />
+          </e>
+          <e p="css" t="Include">
+            <e p="animate.min.css" t="Include" />
+            <e p="bootstrap.css" t="Include" />
+            <e p="bootstrap.min.css" t="Include" />
+            <e p="font-awesome.min.css" t="Include" />
+            <e p="owl.carousel.css" t="Include" />
+            <e p="style-color.css" t="Include" />
+            <e p="style.css" t="Include" />
+          </e>
+          <e p="fonts" t="Include">
+            <e p="fontawesome-webfont.eot" t="Include" />
+            <e p="fontawesome-webfont.svg" t="Include" />
+            <e p="fontawesome-webfont.ttf" t="Include" />
+            <e p="fontawesome-webfont.woff" t="Include" />
+            <e p="fontawesome-webfont.woff2" t="Include" />
+            <e p="FontAwesome.otf" t="Include" />
+          </e>
+          <e p="img" t="Include">
+            <e p="album" t="Include">
+              <e p="1.jpg" t="Include" />
+              <e p="disk.png" t="Include" />
+            </e>
+            <e p="background" t="Include">
+              <e p="footer.png" t="Include" />
+              <e p="overlay.png" t="Include" />
+            </e>
+            <e p="banner" t="Include">
+              <e p="b1.jpg" t="Include" />
+              <e p="b2.jpg" t="Include" />
+            </e>
+            <e p="event" t="Include">
+              <e p="1.jpg" t="Include" />
+              <e p="2.jpg" t="Include" />
+              <e p="3.jpg" t="Include" />
+              <e p="4.jpg" t="Include" />
+            </e>
+            <e p="featured" t="Include">
+              <e p="1.jpg" t="Include" />
+              <e p="2.jpg" t="Include" />
+              <e p="3.jpg" t="Include" />
+              <e p="4.jpg" t="Include" />
+              <e p="5.jpg" t="Include" />
+              <e p="6.jpg" t="Include" />
+              <e p="7.jpg" t="Include" />
+            </e>
+            <e p="flat" t="Include">
+              <e p="back-ptrn.png" t="Include" />
+              <e p="map-marker.png" t="Include" />
+              <e p="map.png" t="Include" />
+            </e>
+            <e p="logo" t="Include">
+              <e p="favicon.ico" t="Include" />
+              <e p="logo.png" t="Include" />
+            </e>
+            <e p="portfolio" t="Include">
+              <e p="1.jpg" t="Include" />
+              <e p="2.jpg" t="Include" />
+              <e p="3.jpg" t="Include" />
+              <e p="4.jpg" t="Include" />
+              <e p="5.jpg" t="Include" />
+              <e p="6.jpg" t="Include" />
+              <e p="7.jpg" t="Include" />
+              <e p="8.jpg" t="Include" />
+            </e>
+            <e p="promo" t="Include">
+              <e p="p1.jpg" t="Include" />
+              <e p="p2.jpg" t="Include" />
+              <e p="p3.jpg" t="Include" />
+              <e p="p4.jpg" t="Include" />
+            </e>
+            <e p="user" t="Include">
+              <e p="1.jpg" t="Include" />
+              <e p="2.jpg" t="Include" />
+              <e p="3.jpg" t="Include" />
+              <e p="4.jpg" t="Include" />
+            </e>
+          </e>
+          <e p="js" t="Include">
+            <e p="bootstrap.js" t="Include" />
+            <e p="bootstrap.min.js" t="Include" />
+            <e p="custom.js" t="Include" />
+            <e p="html5shiv.js" t="Include" />
+            <e p="jquery.js" t="Include" />
+            <e p="jquery.nav.js" t="Include" />
+            <e p="owl.carousel.min.js" t="Include" />
+            <e p="respond.min.js" t="Include" />
+            <e p="waypoints.min.js" t="Include" />
+          </e>
+        </e>
       </e>
     </e>
   </component>
