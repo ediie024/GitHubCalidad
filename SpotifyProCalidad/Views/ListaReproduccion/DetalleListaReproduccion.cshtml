@@ -33,15 +33,17 @@
     
 </audio>
 <ul id="playlist">
-        @foreach (var item in @ViewBag.DetalleDeCanciones)
-        {
-         <li class="current-song">
-    
-                
-           <a href=@item.Musica>@item.Nombre</a>
-    
-          </li>
-        }
+    <ol style="display: block;">
+    @foreach (var item in @ViewBag.DetalleDeCanciones)
+    {
+        <li class="current-song">
+
+
+            <a href=@item.Musica>@item.Nombre</a>
+
+        </li>
+    }
+    </ol>
 </ul>
 
 </body>
@@ -49,7 +51,7 @@
     audioPlayer();
         function audioPlayer(){
             var currentSong = 0;
-            $("#audioPlayer")[0].src = $("#playlist li a")[0];
+            $("#audioPlayer")[0]. src= $("#playlist ol li a")[0];
             $("#audioPlayer")[0].play();
             $("#playlist li a").click(function(e){
                e.preventDefault(); 
@@ -62,11 +64,11 @@
             
             $("#audioPlayer")[0].addEventListener("ended", function(){
                currentSong++;
-                if(currentSong == $("#playlist li a").length)
+                if(currentSong == $("#playlist ol li a").length)
                     currentSong = 0;
                 $("#playlist li").removeClass("current-song");
                 $("#playlist li:eq("+currentSong+")").addClass("current-song");
-                $("#audioPlayer")[0].src = $("#playlist li a")[currentSong].href;
+                $("#audioPlayer")[0].src = $("#playlist ol li a")[currentSong].href;
                 $("#audioPlayer")[0].play();
             });
         }

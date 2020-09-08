@@ -20,6 +20,14 @@ namespace SpotifyProCalidad.Controllers
 
         public IActionResult Index()
         {
+
+            string a="xxxxxxx";
+            var x = a.Length;
+            
+            for (int i = 0; i < x; i++)
+            {
+                
+            }
             return View();
         }
 

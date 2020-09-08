@@ -10,4 +10,14 @@
       <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.0-preview.8.20407.4" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Content" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="Content\css\.DS_Store" />
+      <Content Include="Content\img\.DS_Store" />
+      <Content Include="Content\js\.DS_Store" />
+    </ItemGroup>
+
 </Project>

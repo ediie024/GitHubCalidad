@@ -55,6 +55,7 @@
           <e p="_Layout.cshtml" t="Include" />
           <e p="_ValidationScriptsPartial.cshtml" t="Include" />
           <e p="Error.cshtml" t="Include" />
+          <e p="PlantillaLayout.cshtml" t="Include" />
           <e p="Principal.cshtml" t="Include" />
         </e>
       </e>
