@@ -50,9 +50,63 @@
 			</div>
 		</div>
 		<div class="wrapper" id="home">
+		
+			<!-- header area -->
+			<header>
+				<!-- secondary menu -->
+				<nav class="secondary-menu">
+					<div class="container">
+						<!-- secondary menu left link area -->
+						<div class="sm-left">
+							<strong>Proyecto Calidad</strong>:&nbsp; <a href="#">SpotifyPro</a>&nbsp;&nbsp;&nbsp;&nbsp;
+							
+						</div>
+						<!-- secondary menu right link area -->
+						<div class="sm-right">
+							<!-- social link -->
+						
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</nav>
+				<!-- primary menu -->
+				<nav class="navbar navbar-fixed-top navbar-default">
+					<div class="container">
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+							<!-- logo area -->
+						
+						</div>
+
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a href="#latestalbum">Lista de Reproduccion</a></li>
+			
+							</ul>
+						</div><!-- /.navbar-collapse -->
+					</div><!-- /.container-fluid -->
+				</nav>
+			</header>
+			<!--/ header end -->
+			
+			<!-- banner area -->
+
+			<!--/ banner end -->
+			
+			<!-- block for animate navigation menu -->
 			<div class="nav-animate"></div>
+			
+			<!-- Hero block area -->
 			<div id="latestalbum" class="hero pad">
 				<div class="container">
+					<!-- hero content -->
 					<div class="hero-content ">
 						<!-- heading -->
 						<h2>Lista de reproduccion</h2>
@@ -60,9 +114,11 @@
 						<!-- paragraph -->
 						<p>La mejor opcion para escuciar tu  <strong class="theme-color">musica favorita</strong> </p>
 					</div>
+					<!-- hero play list -->
 					<div class="hero-playlist">
 						<div class="row">
 							<div class="col-md-6 col-sm-6">
+								<!-- music album image -->
 								<div class="hero-content">
 									<audio src="" controls id="audioPlayer" >
                                                                         
@@ -70,11 +126,21 @@
 								</div>
 								<hr>
 								<div class="figure">
+									
+									<!-- image -->
 									<img class="img-responsive" src="~/Plantilla/img/album/1.jpg" alt=""/>
+									<!-- disk image -->
 									<img class="img-responsive disk" src="~/Plantilla/img/album/disk.png" alt=""/>
+
+
 								</div>
+								
+								<!-- album details -->
+							
 							</div>
 							<div class="col-md-6 col-sm-6">
+								<!-- play list -->
+								
 								<div class="playlist-content">
 									<ul class="list-unstyled" id="playlist">
 										@foreach (var item in @ViewBag.DetalleDeCanciones)
@@ -99,10 +165,32 @@
 						</div>
 				</div>
 			</div>
+			<!--/ hero end -->
+			
+			<!-- promo -->
+		
+			<!--/ promo end -->
+			
+			<!-- featured abbum -->
+			
+			<!--/ cta end -->
+			
+			<!-- work with us -->
+			
+			
+		
+     
 			<footer>
 				<div class="container">
+					<!-- social media links -->
+					
+					<!-- copy right -->
+		
 				</div>
 			</footer>
+			<!-- footer end -->
+			
+			<!-- Scroll to top -->
 			<span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span> 
 
 		</div>
@@ -141,10 +229,10 @@
 					    	   
 					    	});
 					    	
-					    		$("#audioPlayer")[0].addEventListener("ended", function(){
-					    	   	currentSong++;
+					    	$("#audioPlayer")[0].addEventListener("ended", function(){
+					    	   currentSong++;
 					    	    if(currentSong == $("#playlist li div a").length)
-					    	    currentSong = 0;
+					    	        currentSong = 0;
 					    	    
 					    	    
 					    	    $("#audioPlayer")[0].src = $("#playlist li div a")[currentSong].href;
